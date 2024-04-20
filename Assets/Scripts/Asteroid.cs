@@ -20,6 +20,8 @@ public class Asteroid : MonoBehaviour
         if (currentHP <= 0)
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity, transform.parent);
+            GameManager.Instance.AddPoint(1);
+            GameManager.Instance.txtPoint.SetText($"Point: {GameManager.Instance.Point}");
             Destroy(gameObject);
         }
     }
