@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7973476145397283232}
   m_Layer: 0
   m_Name: Asteroid Lava Blue
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23ffa91ba4ca4844a917335dac8ed37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 150
   explosionPrefab: {fileID: 8955728485649226867, guid: adad14329ebb41f4cacf4de9f77c640d,
     type: 3}
 --- !u!1 &1619919757320400

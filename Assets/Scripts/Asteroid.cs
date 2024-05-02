@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    [SerializeField] private float maxHP = 100;
+    [SerializeField] private float maxHP = 150;
     [SerializeField] private GameObject explosionPrefab;
     private float currentHP;
+    private bool isDestroyed;
 
     private void Awake()
     {
@@ -17,11 +18,13 @@ public class Asteroid : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHP -= amount;
-        if (currentHP <= 0)
+        if (currentHP <= 0 && !isDestroyed)
         {
+            isDestroyed = true;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity, transform.parent);
             GameManager.Instance.AddPoint(1);
-            GameManager.Instance.txtPoint.SetText($"Point: {GameManager.Instance.Point}");
+            UIManager.Instance.SetPointText();
+            AudioManager.Instance.PlayAudio(Constants.Explosion);
             Destroy(gameObject);
         }
     }
