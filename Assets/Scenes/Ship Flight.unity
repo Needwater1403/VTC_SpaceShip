@@ -6594,8 +6594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: BackgroundMusic
-    clip: {fileID: 0}
-    volume: 0.7
+    clip: {fileID: 8300000, guid: 1b7eade5b1f7bf341bcb23894e8129c9, type: 3}
+    volume: 0.4
     loop: 1
     source: {fileID: 0}
   - name: LaserGun
